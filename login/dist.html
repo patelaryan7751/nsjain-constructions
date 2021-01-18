@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	
+
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -18,9 +18,16 @@
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/database.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 </head>
+    <style>
+        select.decorated option:hover{
+            box-shadow: 0 0 10px 100px #f58634 inset;
+            
+        }
+    
+    </style>
 <body>
 	
 	<div class="limiter">
@@ -33,38 +40,39 @@
 				<form class="login100-form validate-form">
 					<center><div class="main-icon"><img src="images/assigno.png" height="105px" width="105px"></div></center>
 					<span class="login100-form-title">
-					<strong>Add Your Details</strong>
+					<strong>Area Selection</strong>
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "This field is required">
-						<input class="input100" type="text" name="name" id="name" placeholder="Name">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-address-card-o" aria-hidden="true"></i>
-						</span>
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                        <select  style="display:none;" class="input100" name="taluk" id="taluk">
+                        <option >Select Taluk</option>   
+                        </select>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "This Field is required">
-						<input class="input100" type="text" name="mob" id="phnno" placeholder="Mobile no">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-phone" aria-hidden="true"></i>
-						</span>
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<select class="input100" style="display:none;"  name="junction" id="junction">
+                      <option>Select Junction</option>   
+                        </select>
+					</div>
+                    <div class="wrap-input100 validate-input" data-validate = "Password is required">
+				<select class="input100" style="display:none;"  name="area" id="area">
+                      <option>Select Area</option>   
+                        </select>
+					</div>
+                    <div id="price" style="display: none">
+                    
                     </div>
-
-                    <div class="wrap-input100 validate-input" data-validate = "This Field is required">
-						<input class="input100" type="text" name="address" id="adress" placeholder="Address">
-						<span class="focus-input100"></span>
-						<span class="symbol-input100">
-							<i class="fa fa-institution" aria-hidden="true"></i>
-						</span>
-                    </div>
+					
 					<div class="container-login100-form-btn">
-                         <center><img  style="display: none" id="loadar" src="images/throbber_13.gif" width="50px" height="50px"></center>
-						<button id="btn-signup" class="login100-form-btn">
-							Start 
-						</button>
+                        <center><p id="demo1" style="color:red"></p><br>
+                        <img  style="display: none" id="loadar" src="images/throbber_13.gif" width="50px" height="50px"></center>
+
+                       
 					</div>
+                    <button id="btn-login" class="login100-form-btn">
+							Check In
+						</button>
+ 
 					<!--<div class="text-center p-t-136">
 						<a class="txt2" href="#">
 							Create your Account
@@ -72,6 +80,7 @@
 						</a>-->
 					
 				</form>
+                						
 			</div>
 		</div>
 	</div>
@@ -93,7 +102,7 @@
 			scale: 1.1
 		})
 	</script>
-        <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
 
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -101,9 +110,8 @@
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
-    	<script src="js/config.js"></script>
 <!--===============================================================================================-->
-	<script src="js/main3.js"></script>
-
+    <script src="js/config.js"></script>
+<script src="js/dist.js"></script>
 </body>
 </html>

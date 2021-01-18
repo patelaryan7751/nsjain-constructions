@@ -63,7 +63,7 @@ body, html {
   
   a:hover {
       text-decoration: none;
-    color: #57b846;
+    color: #f58364;
   }
   
   /*---------------------------------------------*/
@@ -314,7 +314,7 @@ body, html {
   }
   
   .input100:focus + .focus-input100 + .symbol-input100 {
-    color: #57b846;
+    color: #f58364;
     padding-left: 28px;
   }
   
@@ -342,7 +342,7 @@ body, html {
     width: 100%;
     height: 50px;
     border-radius: 25px;
-    background: #57b846;
+    background: #f58364;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
